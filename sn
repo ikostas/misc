@@ -1,0 +1,113 @@
+#!/usr/bin/bash
+# snippets, initially for helix, HTML and markdown
+# sn command [class]
+# commands:
+# d - div tags with optional class
+# do - <div>, class is supported
+# dc - </div>
+# p - p tags with optional class
+# po - <p>, class is supported
+# pc - </p>
+# u - ul with 3 li with optional class
+# o - ol with 3 li with optional class
+# a - a href with optional class
+# li - li tag with optional class
+# l - markdown link - you may do '|sn l' for selected text
+# for a you may also do '|sn a' for selected text
+# t - markdown task
+# h - empty HTML document
+# if you use pipe with li or t, the selected text will be placed as the first item
+# for helix, you may use ! sn command [class]
+# for vim/neovim, you may use :r! sn command [class]
+
+if [ $2 ]
+then
+  class=" class=\"$2\""
+else
+  class=""
+fi
+
+case $1 in
+  h)
+    cat << EOF
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+  </body>
+</html>
+EOF
+  ;;
+  
+  d)
+    cat << EOF
+<div$class>
+</div>
+EOF
+  ;;
+  
+  do) echo -n "<div$class>"
+  ;;
+
+  dc) echo -n "</div>"
+  ;;
+  
+  a) echo -n "<a$class href=\"\">`cat -`</a>"
+  ;;
+  
+  p)
+    cat << EOF
+<p$class></p>
+EOF
+  ;;
+
+  po) echo -n "<p$class>"
+  ;;
+
+  pc) echo -n "</p>"
+  ;;
+  
+  o)
+    cat << EOF
+<ol$class>
+  <li>`cat -`
+  <li>
+  <li>
+</ol>
+EOF
+  ;;
+  
+  u)
+    cat << EOF
+<ul$class>
+  <li>`cat -`
+  <li>
+  <li>
+</ul>
+EOF
+  ;;
+  
+  li) 
+  cat << EOF
+<li$class>
+EOF
+  ;;
+
+# link in markdown  
+  l) echo -n "[`cat -`](target)"
+  # cat << EOF
+# EOF
+  ;;
+
+# task list in markdown
+  t) cat << EOF
+- [ ] `cat -`
+- [ ]
+- [ ]
+EOF
+  ;;
+esac
+
