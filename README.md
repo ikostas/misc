@@ -1,8 +1,3 @@
----
-title: Some misc scripts and configs
-author: Konstantin Ovchinnikov
----
-
 ## About The Project
 
 Here you can find my configs and a bash file with snippets:
