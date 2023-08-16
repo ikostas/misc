@@ -22,7 +22,7 @@
 (setq dired-recursive-copies 'always)
 (setq dired-recursive-deletes 'always)
 
-(setq-default word-wrap t) ;; включаем перенос слов
+(setq-default word-wrap t) ;; word wrap
 (setq sentence-end-double-space nil)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
