@@ -8,6 +8,8 @@
 # p - p tags with optional class
 # po - <p>, class is supported
 # pc - </p>
+# pp - insert closing tag and open tag on a new line (the next paragraph)
+# h1-h6 with selected text inside
 # u - ul with 3 li with optional class
 # o - ol with 3 li with optional class
 # a - a href with optional class
@@ -69,7 +71,32 @@ EOF
 
   pc) echo -n "</p>"
   ;;
-  
+
+  pp)
+    cat << EOF
+</p>
+<p>
+EOF
+  ;;
+
+  h1) echo -n "<h1$class>`cat -`</h1>"
+  ;;
+
+  h2) echo -n "<h2$class>`cat -`</h2>"
+  ;;
+
+  h3) echo -n "<h3$class>`cat -`</h3>"
+  ;;
+
+  h4) echo -n "<h4$class>`cat -`</h4>"
+  ;;
+
+  h5) echo -n "<h5$class>`cat -`</h5>"
+  ;;
+
+  h6) echo -n "<h6$class>`cat -`</h6>"
+  ;;
+
   o)
     cat << EOF
 <ol$class>
