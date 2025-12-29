@@ -14,7 +14,7 @@ end, {})
 
 -- go linter
 vim.api.nvim_create_user_command("GolintCwd", function()
-	local output = vim.fn.systemlist("golint ./...")
+	local output = vim.fn.systemlist("staticcheck ./...")
 	vim.fn.setqflist({}, " ", {
 		title = "Golint",
 		lines = output,
@@ -72,7 +72,9 @@ vim.keymap.set("c", "<C-k>", "<Up>")
 vim.keymap.set("c", "<C-l>", "<Right>")
 
 -- Russian keyboard langmap
-vim.cmd("set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz")
+vim.cmd(
+	"set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
+)
 
 -- treesitter doesn't work for js/ts with JSX, so we use prettier
 return {

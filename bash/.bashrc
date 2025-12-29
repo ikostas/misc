@@ -1,7 +1,5 @@
 # .bashrc
 
-export JAVA_HOME=/opt/jre1.8.0_431
-
 alias backup='borgmatic -c ~/.config/borgmatic.yaml'
 alias pdftopng='counter=1; for i in *.pdf; do magick "$i" -background white -alpha remove "$counter.png"; ((counter++)); done'
 alias clean-node='find . -name "node_modules" -type d -prune -exec rm -rf {} \;'
@@ -18,7 +16,7 @@ fi
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
-PATH="$PATH:$JAVA_HOME/bin:/usr/lib/golang/bin:/home/kostya/go/bin"
+PATH="$PATH:/home/kostya/go/bin:/usr/local/go/bin"
 export PATH
 if [ -z "$SSH_AUTH_SOCK" ]; then
     export SSH_AUTH_SOCK=$(systemctl --user show ssh-agent.socket --property=Listen | cut -d'=' -f2)
