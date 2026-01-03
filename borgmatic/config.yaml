@@ -1,9 +1,9 @@
 source_directories:
-    - /home/kostya/Documents
-    - /home/kostya/Downloads
-    - /home/kostya/Pictures
-    - /home/kostya/Projects
-    - /home/kostya/.ssh
+    - ~/Documents
+    - ~/Downloads
+    - ~/Pictures
+    - ~/Projects
+    - ~/.ssh
 repositories:
     - path: /media/kostya/data/backup
       label: hdd
