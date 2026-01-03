@@ -18,7 +18,7 @@ kitty config is in `~/.config/kitty/`.
 
 Minecraft shortcut is for `~/.local/share/applications/`.
 
-An icon should be in `/usr/share/pixmaps/`.
+An icon should be in `/usr/share/pixmaps/` and I downloaded it from [freeiconspng.com](https://www.freeiconspng.com/).
 
 ## nvim
 
