@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Minecraft
+Comment=Launch Minecraft
+Exec=/usr/local/bin/minecraft-launcher
+Icon=minecraft
+Terminal=false
+Type=Application
+Categories=Game;SandboxGame;
