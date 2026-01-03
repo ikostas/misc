@@ -1,0 +1,12 @@
+source_directories:
+    - /home/kostya/Documents
+    - /home/kostya/Downloads
+    - /home/kostya/Pictures
+    - /home/kostya/Projects
+    - /home/kostya/.ssh
+repositories:
+    - path: /media/kostya/data/backup
+      label: hdd
+exclude_patterns:
+    - '**/node_modules'
+keep_weekly: 4

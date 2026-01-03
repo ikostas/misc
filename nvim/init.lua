@@ -4,7 +4,7 @@
 -- See the kickstart.nvim README for more information
 
 -- go compiler
-vim.api.nvim_create_user_command("GoRunQF", function()
+vim.api.nvim_create_user_command("GorunCwd", function()
 	vim.fn.setqflist({}, " ", {
 		title = "go run",
 		lines = vim.fn.systemlist("go run *.go"),

@@ -1,6 +1,5 @@
 # .bashrc
 
-alias backup='borgmatic -c ~/.config/borgmatic.yaml'
 alias pdftopng='counter=1; for i in *.pdf; do magick "$i" -background white -alpha remove "$counter.png"; ((counter++)); done'
 alias clean-node='find . -name "node_modules" -type d -prune -exec rm -rf {} \;'
 alias git-graph='git log --graph --decorate --oneline --all'
