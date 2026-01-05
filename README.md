@@ -14,11 +14,13 @@ emacs config is in `~/.emacs.d/`.
 
 kitty config is in `~/.config/kitty/`.
 
+Config uses kitty themes, which can be found [here](https://github.com/dexpota/kitty-themes).
+
 ## minecraft
 
 Minecraft shortcut is for `~/.local/share/applications/`.
 
-An icon should be in `/usr/share/pixmaps/` and I downloaded it from [worldvectorlogo](https://worldvectorlogo.com/search/minecraft)
+An icon should be in `/usr/share/pixmaps/` and I downloaded it from [worldvectorlogo](https://worldvectorlogo.com/search/minecraft).
 
 ## nvim
 
